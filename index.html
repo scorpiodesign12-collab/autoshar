@@ -245,7 +245,7 @@ let lvl=2;const VIDEO={};/* VIDEO[номер билета]='ссылка на в
 const GAMES=[{id:'blockblast',name:'Block Blast',desc:'Собирай линии из блоков и отвечай на вопросы',url:'blockblast.html'}];
 function expl(id){const q=Q[id],k=id>=TB?KID[id-TB]:null;if(!k)return q[3];return lvl==0?k:lvl==1?k+' '+q[3]:q[3]}
 function video(){const n=S.n,u=VIDEO[n];dlg.innerHTML='<h3>Разбор билета '+n+'</h3>'+(u?'<video controls playsinline src="'+u+'"></video>':'<div class="vph"><i data-i="play"></i><span>Видеоразбор этого билета скоро появится</span></div>')+'<button class="btn d w" id="vclose">Закрыть</button>';icons(dlg);dlg.showModal()}
-function games(){dlg.innerHTML='<h3>Выберите игру</h3><p>Отдохни между билетами.</p>'+GAMES.map(g=>'<button class="mc gm" data-g="'+g.id+'"><i data-i="pad"></i><span><b>'+g.name+'</b><small>'+g.desc+'</small></span></button>').join('')+'<button class="btn w" id="vclose" style="background:var(--panel)">Закрыть</button>';icons(dlg);dlg.showModal()}
+function games(){dlg.innerHTML='<h3>Выберите игру</h3><p>Отдохни между билетами.</p>'+GAMES.map(g=>'<button class="mc gm" data-g="'+g.id+'"><i data-i="pad"></i><span><b>'+g.name+'</b><small>'+g.desc+'</small></span></button>').join('')+'<button class="btn w" id="vclose" style="background:var(--panel2,#1c2740);color:var(--ink)">Закрыть</button>';icons(dlg);dlg.showModal()}
 function gameGo(id){const g=GAMES.find(x=>x.id==id);if(!g)return;if(g.url){dlg.close();window.open(g.url,'_blank')}else{dlg.innerHTML='<h3>'+g.name+'</h3><p>Игра скоро появится — подключим её отдельным файлом.</p><button class="btn d w" id="vclose">Понятно</button>'}}
 function lvx(){$('lv').style.setProperty('--p',(lvl*50)+'%');$('lvx').innerHTML='<small>Пример: билет 1, вопрос 2</small>'+expl(TB+1)}
 
