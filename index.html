@@ -72,7 +72,7 @@ h2:first-child{margin-top:14px}
 .res{text-align:center;margin:auto}.res b{font-size:72px;display:block;font-weight:800;letter-spacing:-.04em;color:var(--blue)}.res .btn{margin:4px}
 details{background:var(--panel);border-radius:20px;padding:16px 20px;margin:0 auto 10px;max-width:640px}
 summary{font-weight:700;cursor:pointer}details p{margin:10px 0 0;color:var(--mut)}
-.seg{display:flex;gap:6px;background:var(--bg);padding:5px;border-radius:16px;margin:10px 0 22px;max-width:380px}
+.seg{display:flex;gap:6px;background:var(--bg);padding:5px;border-radius:16px;margin:10px auto 22px;max-width:380px}
 .seg button{flex:1;padding:11px;border-radius:12px;font-weight:700}.seg button.on{background:var(--blue);color:#fff}
 .row{display:flex;justify-content:space-between;align-items:center;font-weight:600;padding:8px 0}
 .sw{width:54px;height:32px;border-radius:20px;background:var(--line);position:relative;flex:none}.sw::after{content:"";position:absolute;left:3px;top:3px;width:26px;height:26px;border-radius:50%;background:#fff;transition:.2s}.sw.on{background:var(--blue)}.sw.on::after{left:25px}
@@ -100,7 +100,7 @@ body.inq #dock{display:none}body.inq{padding-bottom:30px}
 @media(prefers-reduced-motion:reduce){.banner .gl{animation:none}.ring{animation-duration:2.4s}}
 #zm{position:fixed;inset:0;z-index:80;background:rgba(5,10,20,.94);display:flex;flex-direction:column}#zm[hidden]{display:none}.zs{flex:1;overflow:auto;display:flex;-webkit-overflow-scrolling:touch}#zi{margin:auto;max-width:100%;max-height:100%;cursor:zoom-in}#zi.big{max-width:none;max-height:none;width:230%;cursor:zoom-out}#zx{position:fixed;z-index:81;right:14px;top:calc(14px + env(safe-area-inset-top,0px));width:48px;height:48px;border-radius:16px;background:rgba(255,255,255,.16);color:#fff;display:grid;place-items:center;font-size:24px}
 
-#dock .playb{flex:none;position:relative;top:-34px;padding:0 6px;background:none!important;color:#fff;flex-direction:column;gap:5px;font-size:13px;margin:0 6px}
+#dock .playb{flex:none;position:relative;top:-28px;padding:0 6px;background:none!important;color:#fff;flex-direction:column;margin:0 6px}
 #dock .playb .pc2{width:88px;height:88px;border-radius:50%;background:linear-gradient(150deg,#6bb4ff,#2f8cff);display:grid;place-items:center;color:#fff;border:6px solid #0b1220;box-shadow:0 12px 28px rgba(47,140,255,.6)}
 #dock .playb svg{width:44px;height:44px;font-size:44px;stroke-width:1.7}#dock .playb:hover .pc2{filter:brightness(1.08)}
 .vlink{display:flex;align-items:center;justify-content:center;gap:8px;margin:16px auto 0;color:var(--blue);font-weight:700;padding:8px 12px;border-radius:12px}
@@ -115,7 +115,19 @@ html{scrollbar-width:none;-ms-overflow-style:none}html::-webkit-scrollbar{width:
 #lv::-moz-range-track{background:transparent}.lvl{display:flex;justify-content:space-between;font-weight:700;font-size:14px;color:var(--mut)}
 .lvx{margin-top:14px;padding:14px;border-radius:16px;background:var(--bg);color:var(--ink);font-size:15px;line-height:1.45}.lvx small{display:block;color:var(--mut);margin-bottom:6px;font-weight:700}
 .gm small{color:var(--mut)}
-@media(max-width:600px){#dock .playb{margin:0}#dock .playb .pc2{width:70px;height:70px}#dock .playb svg{width:36px;height:36px;font-size:36px}#dock .playb{top:-26px;font-size:11.5px}}
+@media(max-width:600px){#dock{gap:0;padding:6px 4px}#dock button{flex:1 1 0;min-width:0;padding:10px 0;font-size:11px;white-space:nowrap}#dock button svg{font-size:21px}#dock .playb{flex:0 0 84px;margin:0;padding:0;top:-24px;display:flex;align-items:center;justify-content:center}#dock .playb .pc2{width:68px;height:68px;border-width:5px}#dock .playb svg{width:34px;height:34px;font-size:34px}}
+
+.nchips{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:8px 0 22px}
+.nchip{padding:16px 6px;border-radius:18px;background:var(--panel);color:var(--ink);font-weight:800;font-size:16px;border:1px solid var(--line)}.nchip:hover{background:var(--blue);color:#fff}
+.nh2{font-weight:800;font-size:18px;margin:18px 0 6px}
+.nq{background:var(--panel);border-radius:26px;padding:20px;margin:0 0 18px;border:1px solid var(--line)}
+.nq .nn{display:inline-block;background:var(--blue);color:#fff;font-weight:800;font-size:13px;padding:5px 12px;border-radius:99px;margin-bottom:10px}
+.nq h3{font-size:19px;line-height:1.3;margin:0 0 12px}.nq img{display:block;width:100%;border-radius:18px;margin:0 0 14px}
+.nq .nd{background:var(--bg);border-radius:16px;padding:14px;margin:0 0 14px;line-height:1.5}.nq .nd b{display:block;margin-bottom:4px;color:var(--blue)}
+.nq .nopt{padding:12px 14px;border-radius:14px;margin:6px 0;border:1px solid var(--line);line-height:1.4}
+.nq .nopt.ok{border-color:#22c55e;background:rgba(34,197,94,.14)}.nq .nopt.ok b{display:block;color:#16a34a;margin-bottom:2px}
+.nq .nw{margin-top:12px;line-height:1.5}.nq .nw b{color:var(--blue)}
+@media(max-width:600px){.nchips{grid-template-columns:repeat(2,1fr)}.nq{padding:16px;border-radius:22px}}
 </style></head><body>
 <div id="loader" aria-label="Загрузка"><div class="ring"></div><div id="pc">0%</div></div>
 <header class="top"><div class="brand"><span>AVTOSHAR</span></div></header>
@@ -133,6 +145,7 @@ html{scrollbar-width:none;-ms-overflow-style:none}html::-webkit-scrollbar{width:
   <h2>Темы</h2><p class="sub">Коротко о главном — нажмите на тему.</p>
   <div class="grid" id="topics"></div>
  </section>
+ <section class="view" id="v-notes"><button class="vlink" id="nback" style="margin:0 0 6px;justify-content:flex-start"><i data-i="back"></i>Назад</button><h2 id="nt">Конспекты</h2><p class="sub" id="ns">Выберите, по каким вопросам открыть конспект.</p><div id="nbody"></div></section>
  <section class="view" id="v-exam">
   <h2>Экзамен</h2><p class="sub">Как на настоящем: 20 вопросов и 20 минут.</p>
   <div class="card"><h3>Правила</h3><ul><li>20 случайных вопросов</li><li>20 минут на весь билет</li><li>Допускается не более 2 ошибок</li></ul><div class="last" id="last"></div><button class="btn d w" id="go3">Начать экзамен</button></div>
@@ -158,14 +171,14 @@ html{scrollbar-width:none;-ms-overflow-style:none}html::-webkit-scrollbar{width:
 <nav id="dock" aria-label="Основное меню">
  <button data-v="home" class="on"><i data-i="ticket"></i><span>Билеты ПДД</span></button>
  <button data-v="exam"><i data-i="exam"></i><span>Экзамен</span></button>
- <button id="play" class="playb" aria-label="Играть"><span class="pc2"><i data-i="pad"></i></span><span>Играть</span></button>
+ <button id="play" class="playb" aria-label="Играть"><span class="pc2"><i data-i="pad"></i></span></button>
  <button data-v="help"><i data-i="help"></i><span>Помощь</span></button>
  <button data-v="set"><i data-i="set"></i><span>Настройки</span></button>
 </nav>
 <div id="zm" hidden><button id="zx" aria-label="Закрыть"><i data-i="x"></i></button><div class="zs"><img id="zi" alt=""></div></div>
 <dialog id="dlg"></dialog>
 <script>
-const P={ticket:'<path d="M7 3h8l4 4v14H7z"/><path d="M15 3v4h4M10 12h6M10 16h6"/>',exam:'<rect x="6" y="4" width="12" height="17" rx="2"/><path d="M9 4h6v3H9zM9 14l2 2 4-4"/>',help:'<circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.4-1 1-1 1.7M12 17h.01"/>',set:'<path d="M4 7h10M18 7h2M4 17h2M10 17h10"/><circle cx="16" cy="7" r="2"/><circle cx="8" cy="17" r="2"/>',light:'<rect x="8" y="2" width="8" height="20" rx="3"/><circle cx="12" cy="7" r="1.3"/><circle cx="12" cy="12" r="1.3"/><circle cx="12" cy="17" r="1.3"/>',sign:'<path d="M12 2l10 10-10 10L2 12z"/><path d="M8 12h7M12 8.5l3.5 3.5-3.5 3.5"/>',road:'<path d="M8 3L5 21M16 3l3 18M12 4v3M12 10v4M12 17v3"/>',cross:'<path d="M12 3v18M3 12h18M9 6l3-3 3 3M18 9l3 3-3 3"/>',park:'<rect x="3" y="3" width="18" height="18" rx="4"/><path d="M10 17V7h3a3 3 0 0 1 0 6h-3"/>',aid:'<rect x="3" y="7" width="18" height="13" rx="3"/><path d="M9 7V5h6v2M12 11v5M9.5 13.5h5"/>',car:'<path d="M5 16l1.5-5a2 2 0 0 1 1.9-1.4h7.2a2 2 0 0 1 1.9 1.4L19 16"/><rect x="3" y="16" width="18" height="4" rx="1.5"/>',wrench:'<path d="M14.5 6.5a4 4 0 0 0-5 5L3 18l3 3 6.5-6.5a4 4 0 0 0 5-5l-2.5 2.5-2.5-.5-.5-2.5z"/>',drop:'<path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/>',moto:'<circle cx="6" cy="16" r="3.5"/><circle cx="18" cy="16" r="3.5"/><path d="M6 16l4-7h4l4 7M9 9H7"/>',cam:'<path d="M3 8.5a2 2 0 0 1 2-2h2l1.5-2h7l1.5 2h2a2 2 0 0 1 2 2V17a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><circle cx="12" cy="12.5" r="3.4"/>',pad:'<path d="M17.32 5H6.68a4 4 0 0 0-3.98 3.59C2.6 9.42 2 14.46 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.41-1.41A2 2 0 0 1 9.83 16h4.34a2 2 0 0 1 1.41.59L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.55-.6-6.58-.68-7.26A4 4 0 0 0 17.32 5z"/><path d="M6 11h4M8 9v4M15 12h.01M18 10h.01"/>',back:'<path d="M15 5l-7 7 7 7"/>',play:'<path d="M8 5l11 7-11 7z"/>',x:'<path d="M6 6l12 12M18 6L6 18"/>',clock:'<circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9.5 2.5h5"/>',inf:'<path d="M8 8a4 4 0 1 0 0 8c4 0 4-8 8-8a4 4 0 1 1 0 8c-4 0-4-8-8-8z"/>'};
+const P={ticket:'<path d="M7 3h8l4 4v14H7z"/><path d="M15 3v4h4M10 12h6M10 16h6"/>',exam:'<rect x="6" y="4" width="12" height="17" rx="2"/><path d="M9 4h6v3H9zM9 14l2 2 4-4"/>',help:'<circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.4-1 1-1 1.7M12 17h.01"/>',set:'<path d="M4 7h10M18 7h2M4 17h2M10 17h10"/><circle cx="16" cy="7" r="2"/><circle cx="8" cy="17" r="2"/>',light:'<rect x="8" y="2" width="8" height="20" rx="3"/><circle cx="12" cy="7" r="1.3"/><circle cx="12" cy="12" r="1.3"/><circle cx="12" cy="17" r="1.3"/>',sign:'<path d="M12 2l10 10-10 10L2 12z"/><path d="M8 12h7M12 8.5l3.5 3.5-3.5 3.5"/>',road:'<path d="M8 3L5 21M16 3l3 18M12 4v3M12 10v4M12 17v3"/>',cross:'<path d="M12 3v18M3 12h18M9 6l3-3 3 3M18 9l3 3-3 3"/>',park:'<rect x="3" y="3" width="18" height="18" rx="4"/><path d="M10 17V7h3a3 3 0 0 1 0 6h-3"/>',aid:'<rect x="3" y="7" width="18" height="13" rx="3"/><path d="M9 7V5h6v2M12 11v5M9.5 13.5h5"/>',car:'<path d="M5 16l1.5-5a2 2 0 0 1 1.9-1.4h7.2a2 2 0 0 1 1.9 1.4L19 16"/><rect x="3" y="16" width="18" height="4" rx="1.5"/>',wrench:'<path d="M14.5 6.5a4 4 0 0 0-5 5L3 18l3 3 6.5-6.5a4 4 0 0 0 5-5l-2.5 2.5-2.5-.5-.5-2.5z"/>',drop:'<path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/>',moto:'<circle cx="6" cy="16" r="3.5"/><circle cx="18" cy="16" r="3.5"/><path d="M6 16l4-7h4l4 7M9 9H7"/>',cam:'<path d="M3 8.5a2 2 0 0 1 2-2h2l1.5-2h7l1.5 2h2a2 2 0 0 1 2 2V17a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><circle cx="12" cy="12.5" r="3.4"/>',pad:'<path d="M17.32 5H6.68a4 4 0 0 0-3.98 3.59C2.6 9.42 2 14.46 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.41-1.41A2 2 0 0 1 9.83 16h4.34a2 2 0 0 1 1.41.59L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.55-.6-6.58-.68-7.26A4 4 0 0 0 17.32 5z"/><path d="M6 11h4M8 9v4M15 12h.01M18 10h.01"/>',note:'<rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 3v18M12.500 8h3M12.500 12h3"/>',back:'<path d="M15 5l-7 7 7 7"/>',play:'<path d="M8 5l11 7-11 7z"/>',x:'<path d="M6 6l12 12M18 6L6 18"/>',clock:'<circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9.5 2.5h5"/>',inf:'<path d="M8 8a4 4 0 1 0 0 8c4 0 4-8 8-8a4 4 0 1 1 0 8c-4 0-4-8-8-8z"/>'};
 function icons(r=document){r.querySelectorAll('i[data-i]').forEach(e=>{e.outerHTML=`<svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${P[e.dataset.i]}</svg>`})}
 const $=id=>document.getElementById(id);
 function done(){$('loader').classList.add('off')}
@@ -220,7 +233,7 @@ const KID=["Вынужденная остановка — это когда ма
 const TB=Q.length;TQ.forEach(r=>Q.push(r));
 function rng(s){return()=>{s|=0;s=s+0x6D2B79F5|0;let t=Math.imul(s^s>>>15,1|s);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
 function pick(n){if(n>=1&&n<=7)return Array.from({length:20},(_,k)=>TB+(n-1)*20+k);const r=rng(n?n*977:Date.now()),a=Q.map((_,i)=>i);for(let i=a.length-1;i>0;i--){const j=Math.floor(r()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a.slice(0,20)}
-const TP=[["aid","Первая помощь","Вызовите скорую, включите аварийку, выставите знак и окажите помощь пострадавшим."],["park","Как парковаться","Нельзя останавливаться на переходах, мостах и ближе 5 м до перекрёстка."],["ticket","Билеты","40 билетов по 20 вопросов — на время или без.","tk"],["exam","Экзамен","20 вопросов и 20 минут, как на настоящем экзамене.","exam"],["wrench","Устройство авто","Двигатель даёт мощность, тормоза — остановку, подвеска — комфорт и сцепление с дорогой."],["drop","Обслуживание","Проверяйте масло, давление в шинах и жидкости, проходите ТО вовремя."],["car","Какие машины бывают","Легковые, мотоциклы, грузовики и автобусы — у каждого типа своя категория прав: B, A, C и D."]];
+const TP=[["note","Конспекты","Короткие конспекты по вопросам: фото, простое описание, правильный ответ и почему.","notes"],["aid","Первая помощь","Вызовите скорую, включите аварийку, выставите знак и окажите помощь пострадавшим."],["park","Как парковаться","Нельзя останавливаться на переходах, мостах и ближе 5 м до перекрёстка."],["ticket","Билеты","40 билетов по 20 вопросов — на время или без.","tk"],["exam","Экзамен","20 вопросов и 20 минут, как на настоящем экзамене.","exam"],["wrench","Устройство авто","Двигатель даёт мощность, тормоза — остановку, подвеска — комфорт и сцепление с дорогой."],["drop","Обслуживание","Проверяйте масло, давление в шинах и жидкости, проходите ТО вовремя."],["car","Какие машины бывают","Легковые, мотоциклы, грузовики и автобусы — у каждого типа своя категория прав: B, A, C и D."]];
 let hints=true,theme='auto',cur='home',prev='home',last='',S=null,tm=null,pend={};
 function view(v){cur=v;if(v=='home')setTimeout(fold,0);if(v!='quiz')clearInterval(tm);document.querySelectorAll('.view').forEach(e=>e.classList.toggle('on',e.id=='v-'+v));
  document.querySelectorAll('#dock button').forEach(b=>b.classList.toggle('on',b.dataset.v==v));document.body.classList.toggle('inq',v=='quiz');scrollTo(0,0)}
@@ -228,7 +241,7 @@ $('dock').onclick=e=>{const b=e.target.closest('button');if(b){if(b.id=='play'){
 $('back').onclick=()=>view(prev=='quiz'?'home':prev);
 const dlg=$('dlg');
 let lvl=2;const VIDEO={};/* VIDEO[номер билета]='ссылка на видео.mp4' */
-const GAMES=[{id:'blockblast',name:'Block Blast',desc:'Собирай линии из блоков',url:''}];
+const GAMES=[{id:'blockblast',name:'Block Blast',desc:'Собирай линии из блоков и отвечай на вопросы',url:'BlockBlast.html'}];
 function expl(id){const q=Q[id],k=id>=TB?KID[id-TB]:null;if(!k)return q[3];return lvl==0?k:lvl==1?k+' '+q[3]:q[3]}
 function video(){const n=S.n,u=VIDEO[n];dlg.innerHTML='<h3>Разбор билета '+n+'</h3>'+(u?'<video controls playsinline src="'+u+'"></video>':'<div class="vph"><i data-i="play"></i><span>Видеоразбор этого билета скоро появится</span></div>')+'<button class="btn d w" id="vclose">Закрыть</button>';icons(dlg);dlg.showModal()}
 function games(){dlg.innerHTML='<h3>Выберите игру</h3><p>Отдохни между билетами.</p>'+GAMES.map(g=>'<button class="mc gm" data-g="'+g.id+'"><i data-i="pad"></i><span><b>'+g.name+'</b><small>'+g.desc+'</small></span></button>').join('')+'<button class="btn w" id="vclose" style="background:var(--panel)">Закрыть</button>';icons(dlg);dlg.showModal()}
@@ -284,7 +297,7 @@ $('quiz').onclick=e=>{if(e.target.tagName=='IMG'){zoom(e.target.src);return}cons
  else if(b.id=='again'){S.n?mode(S.n):start(0,true,S.title)}};
 $('topics').innerHTML=TP.map((t,i)=>`<button class="bc" data-t="${i}"><div class="gl"><i data-i="${t[0]}"></i></div><h3>${t[1]}</h3><p>${t[2].split('.')[0]}.</p></button>`).join('');
 icons();
-$('topics').onclick=e=>{const b=e.target.closest('.bc');if(!b)return;const t=TP[+b.dataset.t];if(t[3]=='tk'){$('tk').scrollIntoView({behavior:'smooth',block:'center'});return}if(t[3]=='exam'){view('exam');return}
+$('topics').onclick=e=>{const b=e.target.closest('.bc');if(!b)return;const t=TP[+b.dataset.t];if(t[3]=='tk'){$('tk').scrollIntoView({behavior:'smooth',block:'center'});return}if(t[3]=='exam'){view('exam');return}if(t[3]=='notes'){notes();return}
  dlg.innerHTML=`<h3>${t[1]}</h3><p>${t[2]}</p><button class="btn d w" id="dt">Пройти тест</button>`;
  $('dt').onclick=()=>{dlg.close();mode(0,'Случайный билет')};dlg.showModal()};
 const T=[['auto','Авто'],['light','Светлая'],['dark','Тёмная']];
@@ -295,4 +308,9 @@ $('sw').onclick=()=>{hints=!hints;LS.set('hints',hints);$('sw').classList.toggle
 (()=>{const th=LS.get('theme');if(th&&['auto','light','dark'].includes(th)){theme=th;const r=document.documentElement;th=='auto'?r.removeAttribute('data-theme'):r.setAttribute('data-theme',th);seg()}if(LS.get('hints')===false){hints=false;$('sw').classList.remove('on');$('sw').setAttribute('aria-checked',false)}last=LS.get('last')||'';paintTk();fold();setTimeout(fold,300)})();
 
 (()=>{const v=LS.get('lvl');if(v===0||v===1||v===2)lvl=v;$('lv').value=lvl;lvx();$('lv').oninput=()=>{lvl=+$('lv').value;LS.set('lvl',lvl);lvx()}})();
+
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;')}
+function notes(){let o='';const N=(TQ.length/20)|0;for(let t=0;t<N;t++){o+='<div class="nh2">Билет '+(t+1)+'</div><div class="nchips">';for(let a=0;a<4;a++)o+='<button class="nchip" data-a="'+(t*20+a*5)+'">'+(a*5+1)+'–'+(a*5+5)+'</button>';o+='</div>'}$('nt').textContent='Конспекты';$('ns').textContent='Выберите, по каким вопросам открыть конспект.';$('nbody').innerHTML=o;view('notes');icons($('v-notes'))}
+function noteSet(a){const t=(a/20|0)+1;let o='';for(let g=a;g<a+5;g++){const q=Q[TB+g],k=KID[g]||q[3];o+='<article class="nq"><span class="nn">Билет '+t+' · вопрос '+(g%20+1)+'</span><h3>'+esc(q[0])+'</h3>'+(q[5]?'<img src="'+q[5]+'" alt="">':'')+'<div class="nd"><b>Описание вопроса</b>'+esc(k)+'</div>'+q[1].map((x,i)=>'<div class="nopt'+(i==q[2]?' ok':'')+'">'+(i==q[2]?'<b>✓ Правильный ответ</b>':'')+(i+1)+'. '+esc(x)+'</div>').join('')+'<div class="nw"><b>Почему так:</b> '+esc(q[3])+'</div></article>'}$('nt').textContent='Билет '+t+', вопросы '+(a%20+1)+'–'+(a%20+5);$('ns').textContent='Конспект: вопрос, фото, описание и правильный ответ.';$('nbody').innerHTML=o+'<button class="btn d w" id="nmore" style="margin-bottom:20px">К списку конспектов</button>';scrollTo(0,0)}
+$('v-notes').onclick=e=>{const c=e.target.closest('.nchip');if(c){noteSet(+c.dataset.a);return}if(e.target.closest('#nback')){if($('nmore'))notes();else view('home');return}if(e.target.closest('#nmore'))notes()};
 </script></body></html>
