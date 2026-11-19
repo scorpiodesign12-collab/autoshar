@@ -128,6 +128,7 @@ html{scrollbar-width:none;-ms-overflow-style:none}html::-webkit-scrollbar{width:
 .nq .nopt.ok{border-color:#22c55e;background:rgba(34,197,94,.14)}.nq .nopt.ok b{display:block;color:#16a34a;margin-bottom:2px}
 .nq .nw{margin-top:12px;line-height:1.5}.nq .nw b{color:var(--blue)}
 @media(max-width:600px){.nchips{grid-template-columns:repeat(2,1fr)}.nq{padding:16px;border-radius:22px}}
+@media(max-width:600px){#dock .pdd{display:none}}
 </style></head><body>
 <div id="loader" aria-label="Загрузка"><div class="ring"></div><div id="pc">0%</div></div>
 <header class="top"><div class="brand"><span>AVTOSHAR</span></div></header>
@@ -169,7 +170,7 @@ html{scrollbar-width:none;-ms-overflow-style:none}html::-webkit-scrollbar{width:
  </div></section>
 </main>
 <nav id="dock" aria-label="Основное меню">
- <button data-v="home" class="on"><i data-i="ticket"></i><span>Билеты ПДД</span></button>
+ <button data-v="home" class="on"><i data-i="ticket"></i><span>Билеты<span class="pdd"> ПДД</span></span></button>
  <button data-v="exam"><i data-i="exam"></i><span>Экзамен</span></button>
  <button id="play" class="playb" aria-label="Играть"><span class="pc2"><i data-i="pad"></i></span></button>
  <button data-v="help"><i data-i="help"></i><span>Помощь</span></button>
@@ -241,7 +242,7 @@ $('dock').onclick=e=>{const b=e.target.closest('button');if(b){if(b.id=='play'){
 $('back').onclick=()=>view(prev=='quiz'?'home':prev);
 const dlg=$('dlg');
 let lvl=2;const VIDEO={};/* VIDEO[номер билета]='ссылка на видео.mp4' */
-const GAMES=[{id:'blockblast',name:'Block Blast',desc:'Собирай линии из блоков и отвечай на вопросы',url:'BlockBlast.html'}];
+const GAMES=[{id:'blockblast',name:'Block Blast',desc:'Собирай линии из блоков и отвечай на вопросы',url:'blockblast.html'}];
 function expl(id){const q=Q[id],k=id>=TB?KID[id-TB]:null;if(!k)return q[3];return lvl==0?k:lvl==1?k+' '+q[3]:q[3]}
 function video(){const n=S.n,u=VIDEO[n];dlg.innerHTML='<h3>Разбор билета '+n+'</h3>'+(u?'<video controls playsinline src="'+u+'"></video>':'<div class="vph"><i data-i="play"></i><span>Видеоразбор этого билета скоро появится</span></div>')+'<button class="btn d w" id="vclose">Закрыть</button>';icons(dlg);dlg.showModal()}
 function games(){dlg.innerHTML='<h3>Выберите игру</h3><p>Отдохни между билетами.</p>'+GAMES.map(g=>'<button class="mc gm" data-g="'+g.id+'"><i data-i="pad"></i><span><b>'+g.name+'</b><small>'+g.desc+'</small></span></button>').join('')+'<button class="btn w" id="vclose" style="background:var(--panel)">Закрыть</button>';icons(dlg);dlg.showModal()}
